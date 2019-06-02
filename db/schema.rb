@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180820050003) do
+ActiveRecord::Schema.define(version: 20180820143522) do
 
   create_table "beerdbs", force: :cascade do |t|
     t.string   "num"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(version: 20180820050003) do
     t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "breweryposts", force: :cascade do |t|
+    t.text     "name"
+    t.text     "tab"
+    t.text     "bottlebeer"
+    t.string   "storeimage"
+    t.string   "menuimage"
+    t.text     "event"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.float    "x"
+    t.float    "y"
   end
 
   create_table "posts", force: :cascade do |t|

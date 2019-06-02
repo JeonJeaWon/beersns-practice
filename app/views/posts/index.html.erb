@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to "GO TO BREWERY POST", breweryposts_path, style: "color: red" %>
 
 <head>
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArXEvyWLOJs-JGPMjqpTSRMYgVyol8dX8"></script>
+      <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArXEvyWLOJs-JGPMjqpTSRMYgVyol8dX8"></script-->
             <style>
         #map {
             height: 600px;
@@ -178,12 +179,16 @@ function myFunc() {
 <div class="bodywrapper">
 <div class="container">
 <div id="map"></div>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArXEvyWLOJs-JGPMjqpTSRMYgVyol8dX8"></script>
+<!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArXEvyWLOJs-JGPMjqpTSRMYgVyol8dX8" data-no-turbolink></script-->
 <script>
+//function initMap() {
+
+function initMap(){
         var seoul = {lat: 37.557216,lng: 126.987319};
         var smap = new google.maps.Map(document.getElementById('map'), {
             zoom: 12,
             center: seoul
+            //refreshTime: 10000
             
         });
         
@@ -268,9 +273,22 @@ function myFunc() {
     infowindow.open(smap,marker);
 
   });
-  <%end%>      
-$()
+  <%end%>     
+  
+  $(document).on('pageload', function() {
+  initialize();
+});
+  
+  //google.maps.event.addDomListener(window, 'load', initialize);
+  
+   /*$(document).ready(function(){
+      initialize();
+ });*/
+ //.maps.event.trigger(smap, 'resize');
+//}
 
+$()
+}
 
 </script>
 </div>

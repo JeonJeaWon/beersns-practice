@@ -1,1 +1,2 @@
-$(".map-posts").html("<div><%= @post.title%></div><div><%= @post.content%></div><div><!--img src='<%= @post.hashtag %>'--></div>").hide().fadeIn(500);
+$(".map-posts").html("<div><%= @brewerypost.name%></div><div><%= @brewerypost.tab%></div><div><%= @brewerypost.event %></div>
+<div><img src='<%= @brewerypost.storeimage %>'</div>").hide().fadeIn(500);

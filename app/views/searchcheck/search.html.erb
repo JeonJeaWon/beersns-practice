@@ -1,11 +1,11 @@
 <h1>Searchcheck#search</h1>
 <p>Find me in app/views/searchcheck/search.html.erb</p>
 
-<form name="Survey" method="get" action="">
+<form name="Survey" method="get" action="post">
   <div class= "survey">  
     <p>
     <label for="Alcohol">도수</label>
-    <input type="checkbox" name="Alcohol" value=1> 4도 이하
+    <input type="checkbox" name="Alcohol" value=1 onclick="sch_dtime_chg();"> 4도 이하
     <input type="checkbox" name="Alcohol" value=2> 6도 이하
     <input type="checkbox" name="Alcohol" value=3> 8도 이하
     <input type="checkbox" name="Alcohol" value=4> 10도 이하

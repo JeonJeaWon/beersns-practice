@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   
   get 'posts_ajax/:post_id' => 'posts#ajaxIndex'
 
-  root 'posts#index'
+  root 'posts#index' 
+  
+  get 'brewerypost' => 'posts#brewerypost'
+  
+  get 'breweryposts' => 'breweryposts#index'
   
   resources :posts do
     collection do
